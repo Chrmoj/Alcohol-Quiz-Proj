@@ -1,0 +1,152 @@
+.App {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightgreen;
+}
+/* Custom elements*/
+:root {
+    --first-background-color: dimgray;
+    --first-color: white;
+    --second-color: #e9967a;
+    --second-background-color: gray;
+    --third-color: black;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-family: 'Goblin One', cursive
+}
+
+.description {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+}
+
+.App h2 {
+    font-size: 2rem;
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+    color: var(--second-color);
+    background-color: var(--first-background-color);
+    overflow: hidden;
+}
+
+/* Layout of the App */
+.Menu, 
+.Quiz,
+.EndScreen {
+    width: 555px;
+    height: 474px;
+    border-radius: 10px;
+    background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The buttons */
+.Menu button,
+.Quiz button,
+.EndScreen button {
+    width: 300px;
+    height: 50px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.Menu, 
+.Quiz,
+.EndScreen {
+    color: var(--first-color)
+
+}
+
+.Menu h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 100px;
+    font-family: 'Anton', sans-serif;
+    
+}
+
+/* The Next Question Button*/
+.btn-quiz {
+    margin: 10px;
+    background-color: firebrick;
+    color: floralwhite;
+    
+}
+
+.btn-quiz:hover {
+    color: var(--third-color);
+    font-size: 1.3rem;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.9);
+}
+
+/* The Finish Button at the Final Question */
+.btn-finish {
+    background-color: blue;
+    color: var(--first-color)
+}
+
+.btn-finish:hover {
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.9);
+    color: var(--third-color);
+    font-family: 'Permanent Marker', cursive;
+    font: bolder;
+}
+
+/* The Options*/
+.options {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-btn {
+    z-index: 1;
+    overflow: hidden;
+    background-color: lightgrey;
+    transition: color 500ms ease-in-out;
+}
+
+.quiz-btn :hover::before,
+.quiz-btn :focus::before {
+    transform: scale(0);
+}
+
+.quiz-btn:hover,
+.quiz-btn:focus {
+    color: darkorange;
+    background-color: var(--second-background-color);
+}
+
+.Quiz h1 {
+    text-align: center;
+}
+
+/* The Button to Restart the Quiz*/
+.end-btn:hover {
+    background-color: var(--first-background-color);
+    color: var(--second-color);
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.9);
+}
